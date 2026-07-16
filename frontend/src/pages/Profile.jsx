@@ -35,14 +35,13 @@ export default function Profile() {
   const fetchProfileData = async () => {
     try {
       setLoading(true);
-      const [lostRes, foundRes, claimsRes] = await Promise.all([
-        api.get('/items/lost?mine=true'),
-        api.get('/items/found?mine=true'),
+      const [itemsRes, claimsRes] = await Promise.all([
+        api.get('/items/my-items'),
         api.get('/claims/my'),
       ]);
-      setLostItems(lostRes.data.items || lostRes.data || []);
-      setFoundItems(foundRes.data.items || foundRes.data || []);
-      setClaims(claimsRes.data || []);
+      setLostItems(itemsRes.data.lostItems || []);
+      setFoundItems(itemsRes.data.foundItems || []);
+      setClaims(claimsRes.data.data || claimsRes.data || []);
     } catch (error) {
       console.error('Error fetching profile data:', error);
     } finally {

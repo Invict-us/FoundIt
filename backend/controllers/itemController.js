@@ -627,3 +627,28 @@ export const getUserMatches = async (req, res) => {
     res.status(500).json({ success: false, message: error.message || 'Server error' });
   }
 };
+
+// ---------------------------------------------------------------------------
+// @desc    Get items reported by the current user
+// @route   GET /api/items/my-items
+// @access  Private
+// ---------------------------------------------------------------------------
+export const getMyItems = async (req, res) => {
+  try {
+    const userId = req.user._id;
+
+    const [lostItems, foundItems] = await Promise.all([
+      LostItem.find({ ownerId: userId }).sort('-createdAt'),
+      FoundItem.find({ finderId: userId }).sort('-createdAt'),
+    ]);
+
+    res.json({
+      success: true,
+      lostItems,
+      foundItems,
+    });
+  } catch (error) {
+    console.error('Get my items error:', error);
+    res.status(500).json({ success: false, message: error.message || 'Server error' });
+  }
+};

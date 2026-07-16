@@ -7,6 +7,7 @@ import {
   searchItems,
   getItemById,
   updateItemStatus,
+  getMyItems,
 } from '../controllers/itemController.js';
 import { protect, authorize } from '../middleware/auth.js';
 
@@ -14,6 +15,7 @@ const router = express.Router();
 
 router.post('/lost', protect, createLostItem);
 router.post('/found', protect, createFoundItem);
+router.get('/my-items', protect, getMyItems);
 router.get('/lost', getLostItems);
 router.get('/found', getFoundItems);
 router.get('/search', searchItems);
