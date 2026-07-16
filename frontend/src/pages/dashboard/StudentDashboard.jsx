@@ -91,7 +91,7 @@ export default function StudentDashboard() {
           {getGreeting()}, {user?.name?.split(' ')[0]}!
         </h1>
         <p className="text-slate-600 dark:text-slate-400 mt-1">
-          Here is an overview of your activity on FoundIt.
+          Here is an overview of your activity on Lost and Found System.
         </p>
       </motion.div>
 

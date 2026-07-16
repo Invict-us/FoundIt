@@ -107,10 +107,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 overflow-hidden flex items-center justify-center">
-                <img src="/logo.png" alt="FoundIt Logo" className="w-full h-full object-contain" />
+                <img src="/logo.png" alt="Lost and Found System Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-xl font-bold text-navy-800 dark:text-white tracking-tight leading-none">
-                Found<span className="text-teal-500">It</span>
+                Lost and Found <span className="text-teal-500">System</span>
               </span>
             </Link>
 

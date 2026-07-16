@@ -58,7 +58,7 @@ export default function Login() {
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">Welcome Back!</h1>
           <p className="text-teal-100 text-lg max-w-md">
-            Securely access the FoundIt platform to report items or verify ownership.
+            Securely access the Lost and Found System platform to report items or verify ownership.
           </p>
         </motion.div>
 

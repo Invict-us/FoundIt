@@ -63,8 +63,8 @@ export default function LandingPage() {
 
   const testimonials = [
     { text: "I lost my ID card near the library and got it back within 24 hours.", author: "Rahul, CSE", avatar: "👨‍🎓" },
-    { text: "I recovered my calculator before my exam. Thank you FoundIt!", author: "Ananya, ECE", avatar: "👩‍🎓" },
-    { text: "I found my wallet through the FoundIt notification system.", author: "Priya, MBA", avatar: "👩‍💼" }
+    { text: "I recovered my calculator before my exam. Thank you Lost and Found System!", author: "Ananya, ECE", avatar: "👩‍🎓" },
+    { text: "I found my wallet through the Lost and Found System notification system.", author: "Priya, MBA", avatar: "👩‍💼" }
   ];
 
   const popularLocations = [
@@ -99,7 +99,7 @@ export default function LandingPage() {
               Never Lose What <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-sky-400">Matters</span>
             </h1>
             <p className="mt-4 text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-              FoundIt is a smart campus lost-and-found platform that helps students, faculty, and staff quickly report, search, match, and recover lost belongings through a centralized digital system.
+              Lost and Found System is a smart campus lost-and-found platform that helps students, faculty, and staff quickly report, search, match, and recover lost belongings through a centralized digital system.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -276,7 +276,7 @@ export default function LandingPage() {
                 Ready to find what you've lost?
               </h2>
               <p className="text-teal-100 text-lg max-w-2xl mx-auto mb-10">
-                Join thousands of students securely recovering their belongings on campus every day with FoundIt.
+                Join thousands of students securely recovering their belongings on campus every day with Lost and Found System.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link to="/register">
